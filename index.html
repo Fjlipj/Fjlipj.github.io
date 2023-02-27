@@ -3,13 +3,29 @@
 <head>
 	<title>Strona startowa</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="style.css" type="text/css">
+    
     <link rel="stylesheet" href="css/fontello.css" type="text/css">
   <link href='https://fonts.googleapis.com/css?family=Lato|Josefin+Sans&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto+Mono&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet">
 	<script src="timer.js"></script>
+  <script type="text/javascript">
+        var currentTime = new Date().getHours();
+        if(7 <= currentTime&&currentTime < 19){
+          document.write("<link rel='stylesheet' href='style_dzien.css' type='text/css'>");
+        }
+        else if(19 <=currentTime&&currentTime <22){
+          document.write("<link rel='stylesheet' href='style_wieczur.css' type='text/css'>");
+        }
+        else{
+          document.write("<link rel='stylesheet' href='style_nuc.css' type='text/css'>");
+        }
+
+
+
+
+  </script>
 		<title>Nowa Karta
 	</title>
 </head>
@@ -21,7 +37,7 @@
     </div>
   
     <div class="square">
-      <form class="square" method="get" action="https://www.google.com/search">
+      <form class="square" method="get" action="http://www.google.com/search">
       <input id="search" type="text" name="q" placeholder="Search in Google"/>
       </form>
     </div>
